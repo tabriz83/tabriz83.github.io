@@ -7,6 +7,7 @@ import datetime
 import time
 import facebook
 
+
 def httprequest(url) :
     req = urllib.request.Request(url)
     resp = urllib.request.urlopen(req)
@@ -50,16 +51,18 @@ def httprequest(url) :
 def facebook_login():
     fb.login()
 
-app_id = '254922358182758'
-app_secret = '63c3bf7253e40c7c7f851f7d78ec6916'
-access_token = 'CAACEdEose0cBABSMtMK6iYtCmSxPUhmhJtQdS4X1nTsHY4gec8nMtxy2e0Y6AGri6KKQiZBwOxrlavRZBAZC3ib6nxpZA6qDwVC1vcd1puS05j3yQIgZBrDKuH2qDpxxeqoyJ3bN9ZCaX0D4zznbUjxXBIwquTZBBkVBeUwO4kaUSHOyWbtuU0EE5keMZAt7o1ZCZAaydESjmPBQZDZD'
-url = "https://graph.facebook.com/v2.5/me/feed?fields=name%2Clink%2Cdescription%2Cpicture%2Cupdated_time&until=%201%20day&locale=kor&access_token="+access_token
-
 
 if __name__ == "__main__":
     dt = str(datetime.date.today())
     now_b = time.localtime()
     now = str("%04d-%02d-%02d %02d:%02d:%02d" % (now_b.tm_year, now_b.tm_mon, now_b.tm_mday, now_b.tm_hour, now_b.tm_min, now_b.tm_sec))
+
+
+    app_id = '254922358182758'
+    app_secret = '63c3bf7253e40c7c7f851f7d78ec6916'
+    access_token = 'CAACEdEose0cBAITCaa1WZCfUkSkr7ThpZAxSzgHHnJ0dSjLVWVRroLLSZAVpe5bhGzkHJYShglZBgCVu5ZAxWTasJZB8x8kY0FrhneCahZBIcDbnRwEmvCFzPNCUACASPJoU0tzzUT0oExLKzE3pQDxYZB6bCyDVIn7eGTVqLzTiXK1kzZCtFBCRZC5qiqCofIamsWqLJQQj9OcQZDZD'
+    url = "https://graph.facebook.com/v2.5/me/feed?fields=name%2Clink%2Cdescription%2Cpicture%2Cupdated_time&since=2016-03-12&limit=5000&locale=kor&access_token="+access_token
+
 
     f = open("d:/Github/Pages/umbrain/_posts/"+dt+"-Facebook_scrap.md", 'w', encoding='UTF-8')
     f.write(
