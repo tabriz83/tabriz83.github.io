@@ -5,7 +5,7 @@ import urllib.request
 import json
 import datetime
 import time
-import facebook
+#import facebook
 
 
 def httprequest(url) :
@@ -60,8 +60,9 @@ if __name__ == "__main__":
 
     app_id = '254922358182758'
     app_secret = '63c3bf7253e40c7c7f851f7d78ec6916'
-    access_token = 'CAACEdEose0cBAITCaa1WZCfUkSkr7ThpZAxSzgHHnJ0dSjLVWVRroLLSZAVpe5bhGzkHJYShglZBgCVu5ZAxWTasJZB8x8kY0FrhneCahZBIcDbnRwEmvCFzPNCUACASPJoU0tzzUT0oExLKzE3pQDxYZB6bCyDVIn7eGTVqLzTiXK1kzZCtFBCRZC5qiqCofIamsWqLJQQj9OcQZDZD'
-    url = "https://graph.facebook.com/v2.5/me/feed?fields=name%2Clink%2Cdescription%2Cpicture%2Cupdated_time&since=2016-03-12&limit=5000&locale=kor&access_token="+access_token
+    access_token = 'CAACEdEose0cBAFMmAYwEdqyDurNXZCBPBAuW9Ys011wTfHGnW16WULhZCIv5JdKDVjcLmn2wRNWEymzDNZATIM73Xmzjh0O6rBUHVosYu7wE2MiVGOjE2DvzFy4vIYXcRFZB093T05qV2KQGvIeME7Op6CTDu3ujq49vee5mMdKatdZCcYe55jZCqvoXy0nN8hbdnZCK8eAvwZDZD'
+    #url = "https://graph.facebook.com/v2.5/me/feed?fields=name%2Clink%2Cdescription%2Cpicture%2Cupdated_time&since=2016-03-15&limit=5000&locale=kor&access_token="+access_token
+    url = "https://graph.facebook.com/v2.5/me/feed?fields=name%2Clink%2Cdescription%2Cpicture%2Cupdated_time&since="+dt+"&limit=5000&locale=kor&access_token="+access_token
 
 
     f = open("d:/Github/Pages/umbrain/_posts/"+dt+"-Facebook_scrap.md", 'w', encoding='UTF-8')
