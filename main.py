@@ -60,17 +60,19 @@ if __name__ == "__main__":
 
     app_id = '254922358182758'
     app_secret = '63c3bf7253e40c7c7f851f7d78ec6916'
-    access_token = 'CAACEdEose0cBAFMmAYwEdqyDurNXZCBPBAuW9Ys011wTfHGnW16WULhZCIv5JdKDVjcLmn2wRNWEymzDNZATIM73Xmzjh0O6rBUHVosYu7wE2MiVGOjE2DvzFy4vIYXcRFZB093T05qV2KQGvIeME7Op6CTDu3ujq49vee5mMdKatdZCcYe55jZCqvoXy0nN8hbdnZCK8eAvwZDZD'
-    #url = "https://graph.facebook.com/v2.5/me/feed?fields=name%2Clink%2Cdescription%2Cpicture%2Cupdated_time&since=2016-03-15&limit=5000&locale=kor&access_token="+access_token
-    url = "https://graph.facebook.com/v2.5/me/feed?fields=name%2Clink%2Cdescription%2Cpicture%2Cupdated_time&since="+dt+"&limit=5000&locale=kor&access_token="+access_token
+    access_token = 'CAACEdEose0cBAPku813WBUUiXmMXb365mrARMLVAkx7nVzarmCRqm1iUxKiexRywEj8m3RwU2aclPIPi1zN01HSF9iBnSTNefM7tbwtzzXTnCHeP5KTp1xZBSZBtoku6sOCplAYjZCIvDlwiLqzQRnZBOsQoJ79TxNuahmsJrm672gKCQgExZCKnZCLY3wd0a5sP9D5MT2ggZDZD'
+    url = "https://graph.facebook.com/v2.5/me/feed?fields=name%2Clink%2Cdescription%2Cpicture%2Cupdated_time&since=2016-03-17&until=2016-03-18&limit=5000&locale=kor&access_token="+access_token
 
+    # url = "https://graph.facebook.com/v2.5/me/feed?fields=name%2Clink%2Cdescription%2Cpicture%2Cupdated_time&since="+dt+"&limit=5000&locale=kor&access_token="+access_token
 
-    f = open("d:/Github/Pages/umbrain/_posts/"+dt+"-Facebook_scrap.md", 'w', encoding='UTF-8')
+    f = open("d:/Github/Pages/umbrain/_posts/2016-03-17-Facebook_scrap.md", 'w', encoding='UTF-8')
+    # f = open("d:/Github/Pages/umbrain/_posts/"+dt+"-Facebook_scrap.md", 'w', encoding='UTF-8')
     f.write(
         "---\n"
         "layout: post\n"
         "cover: 'assets/images/cover3.jpg'\n"
-        "title: "+dt+" Facebook 정보 스크랩\n"
+        "title: 2016-03-17-Facebook 정보 스크랩\n"
+        # "title: "+dt+" Facebook 정보 스크랩\n"
         "date: "+now+"\n"
         "tags: Unclassified\n"
         "subclass: 'post tag-Unclassified'\n"
